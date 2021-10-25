@@ -24,19 +24,13 @@ namespace LeapYear.Test
 			Assert.False( LeapYear.IsLeapYear( year ) );
 		}
 
-		[Fact]
-		public void Year4_ShouldBe_LeapYear () {
-			Assert.True( LeapYear.IsLeapYear( 4 ) );
-		}
-
-		[Fact]
-		public void Year8_ShouldBe_LeapYear () {
-			Assert.True( LeapYear.IsLeapYear( 8 ) );
-		}
-
-		[Fact]
-		public void Year12_ShouldBe_LeapYear () {
-			Assert.True( LeapYear.IsLeapYear( 12 ) );
+		[Theory]
+		[InlineData( 4 )]
+		[InlineData( 8 )]
+		[InlineData( 12 )]
+		public void YearsDivisibleBy4_AndNotBy100_ShouldBe_LeapYear (
+				Int32 year) {
+			Assert.True( LeapYear.IsLeapYear( year ) );
 		}
 	}
 }
