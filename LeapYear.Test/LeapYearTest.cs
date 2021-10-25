@@ -33,5 +33,10 @@ namespace LeapYear.Test
 		public void Year8_ShouldBe_LeapYear () {
 			Assert.True( LeapYear.IsLeapYear( 8 ) );
 		}
+
+		[Fact]
+		public void Year12_ShouldBe_LeapYear () {
+			Assert.True( LeapYear.IsLeapYear( 12 ) );
+		}
 	}
 }
