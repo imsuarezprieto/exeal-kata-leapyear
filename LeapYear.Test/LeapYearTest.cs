@@ -23,5 +23,10 @@ namespace LeapYear.Test
 				Int32 year) {
 			Assert.False( LeapYear.IsLeapYear( year ) );
 		}
+
+		[Fact]
+		public void Year4_ShouldBe_LeapYear () {
+			Assert.True( LeapYear.IsLeapYear( 4 ) );
+		}
 	}
 }
