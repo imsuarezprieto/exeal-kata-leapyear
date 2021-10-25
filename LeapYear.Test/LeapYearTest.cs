@@ -7,8 +7,8 @@ namespace LeapYear.Test
 	public class LeapYearTest
 	{
 		[Fact]
-		public void Test1 () {
-
+		public void Year400_ShouldBe_LeapYear () {
+			Assert.True( LeapYear.IsLeapYear( 400 ) );
 		}
 	}
 }
