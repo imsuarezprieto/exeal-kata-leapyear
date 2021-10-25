@@ -8,6 +8,7 @@ namespace LeapYear
 				Int32 year) {
 			if (year == 100) return false;
 			if (year == 200) return false;
+			if (year == 300) return false;
 			return true;
 		}
 	}
