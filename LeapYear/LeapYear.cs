@@ -6,9 +6,14 @@ namespace LeapYear
 	{
 		public static Boolean IsLeapYear (
 				Int32 year) {
-			if ((year % 100 == 0) && (year % 400 != 0)) return false;
-			if (year % 4 != 0) return false;
+			if (year.IsDivisibleBy( 100 ) && !year.IsDivisibleBy( 400 )) return false;
+			if (!year.IsDivisibleBy( 4 )) return false;
 			return true;
 		}
+
+		public static Boolean IsDivisibleBy (
+				this Int32 dividend,
+				Int32 divisor)
+			=> dividend % divisor == 0;
 	}
 }
