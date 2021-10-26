@@ -33,19 +33,13 @@ namespace LeapYear.Test
 			Assert.True( LeapYear.IsLeapYear( year ) );
 		}
 
-		[Fact]
-		public void Year1_ShouldNotBe_LeapYear () {
-			Assert.False( LeapYear.IsLeapYear( 1 ) );
-		}
-
-		[Fact]
-		public void Year2_ShouldNotBe_LeapYear () {
-			Assert.False( LeapYear.IsLeapYear( 2 ) );
-		}
-
-		[Fact]
-		public void Year3_ShouldNotBe_LeapYear () {
-			Assert.False( LeapYear.IsLeapYear( 3 ) );
+		[Theory]
+		[InlineData( 1 )]
+		[InlineData( 2 )]
+		[InlineData( 3 )]
+		public void YearsNotDivisibleBy4_ShouldNotBe_LeapYears (
+				Int32 year) {
+			Assert.False( LeapYear.IsLeapYear( year ) );
 		}
 	}
 }
